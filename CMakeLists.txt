@@ -14,4 +14,10 @@ add_executable(analog
     src/filters/high_pass_filter.cpp
     src/filters/band_pass_filter.cpp
     src/filters/band_stop_filter.cpp
+    src/operators/amplitude_scale_operator.cpp
+    src/operators/phase_shift_operator.cpp
+    src/operators/frequency_shift_operator.cpp
+    src/operators/frequency_scale_operator.cpp
+    src/operators/time_shift_operator.cpp
+    src/operators/conjugate_operator.cpp
 )
