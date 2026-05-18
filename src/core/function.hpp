@@ -13,6 +13,8 @@ namespace analog
             function() = default;
 
             void add_wave(const wave& wave);
+            bool sub_wave(double frequency);
+            const wave* get_wave(double frequency) const;
 
             std::complex<double> evaluate(double x) const;
             
