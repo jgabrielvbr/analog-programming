@@ -2,7 +2,9 @@
 
 #include "mnist_sample.hpp"
 
-#include "../core/wave.hpp"
+#include "../../core/wave.hpp"
+
+#include <cstddef>
 
 namespace analog
 {

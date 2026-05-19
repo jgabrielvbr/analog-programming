@@ -1,6 +1,6 @@
 #pragma once
 
-#include "encoder.hpp"
+#include "../encoder.hpp"
 
 namespace analog
 {

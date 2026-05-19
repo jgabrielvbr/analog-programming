@@ -10,21 +10,16 @@ set(ANALOG_CORE_SOURCES
     src/core/wave.cpp
     src/core/function.cpp
     src/core/transform.cpp
-    src/interactions/superposition.cpp
-    src/interactions/subtraction.cpp
-    src/interactions/product.cpp
-    src/interactions/correlation.cpp
-    src/interactions/convolution.cpp
-    src/interactions/modulation.cpp
-    src/interactions/mixing.cpp
-    src/interactions/difference.cpp
-    src/presets/preset.cpp
-    src/presets/low_pass.cpp
-    src/presets/high_pass.cpp
-    src/presets/band_pass.cpp
-    src/presets/band_stop.cpp
-    src/presets/gaussian.cpp
-    src/presets/resonance.cpp
+    src/core/interaction.cpp
+    src/kernels/kernel.cpp
+    src/kernels/archive.cpp
+    src/kernels/archive_builder.cpp
+)
+
+set(ANALOG_MNIST_SOURCES
+    src/encoding/mnist/mnist_sample.cpp
+    src/encoding/mnist/mnist_encoder.cpp
+    src/encoding/mnist/mnist_loader.cpp
 )
 
 add_executable(analog
@@ -32,14 +27,8 @@ add_executable(analog
     ${ANALOG_CORE_SOURCES}
 )
 
-add_executable(mnist_train
-    src/mnist_main.cpp
-    src/network/mnist_loader.cpp
-    src/network/resonator_node.cpp
-    src/network/resonator_layer.cpp
-    src/network/resonator_node_2d.cpp
-    src/network/resonator_layer_2d.cpp
-    src/network/readout.cpp
-    src/network/network.cpp
+add_executable(mnist_archive
+    src/mnist_archive_main.cpp
     ${ANALOG_CORE_SOURCES}
+    ${ANALOG_MNIST_SOURCES}
 )

@@ -1,5 +1,7 @@
 #include "mnist_sample.hpp"
 
+#include <utility>
+
 namespace analog
 {
     mnist_sample::mnist_sample(std::vector<std::uint8_t> pixels, int label) : pixels_(std::move(pixels)), label_(label)
