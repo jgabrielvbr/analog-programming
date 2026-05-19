@@ -9,13 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(ANALOG_CORE_SOURCES
     src/core/wave.cpp
     src/core/function.cpp
-    src/transforms/amplitude_scale.cpp
-    src/transforms/phase_shift.cpp
-    src/transforms/frequency_shift.cpp
-    src/transforms/frequency_scale.cpp
-    src/transforms/time_shift.cpp
-    src/transforms/conjugate.cpp
-    src/transforms/preset_transform.cpp
+    src/core/transform.cpp
     src/interactions/superposition.cpp
     src/interactions/subtraction.cpp
     src/interactions/product.cpp
